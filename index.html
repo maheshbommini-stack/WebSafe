@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSafe | Threat Scanner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">◈ WEBSafe</div>
+  <div class="status"><span></span> SYSTEM ONLINE</div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="tag">CYBERSECURITY ANALYZER</p>
+    <h1>Detect the <span>Danger</span><br>Before You Click.</h1>
+    <p class="subtitle">
+      Analyze suspicious URLs and messages using intelligent client-side
+      security checks.
+    </p>
+  </section>
+
+  <section class="scanner">
+    <div class="input-area">
+      <label>ENTER URL OR MESSAGE</label>
+      <textarea id="target"
+        placeholder="https://example.com/login"></textarea>
+      <button id="scanBtn">⚡ START SECURITY SCAN</button>
+    </div>
+
+    <div class="terminal" id="terminal">
+      <div>WebSafe Security Terminal v1.0</div>
+      <div>Ready for analysis...</div>
+    </div>
+  </section>
+
+  <section class="result hidden" id="result">
+
+    <div class="score-card">
+      <div class="score-circle" id="scoreCircle">
+        <strong id="score">0</strong>
+        <small>/100</small>
+      </div>
+      <h2 id="riskLevel">LOW RISK</h2>
+      <p id="riskText">Analysis complete.</p>
+    </div>
+
+    <div class="checks">
+      <h2>Security Analysis</h2>
+
+      <div class="check">
+        <span>HTTPS Encryption</span>
+        <b id="httpsCheck">—</b>
+      </div>
+
+      <div class="check">
+        <span>Suspicious Keywords</span>
+        <b id="keywordCheck">—</b>
+      </div>
+
+      <div class="check">
+        <span>IP Address Detection</span>
+        <b id="ipCheck">—</b>
+      </div>
+
+      <div class="check">
+        <span>Suspicious Domain</span>
+        <b id="domainCheck">—</b>
+      </div>
+
+      <div class="check">
+        <span>URL Length</span>
+        <b id="lengthCheck">—</b>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="history">
+    <h2>Recent Scans</h2>
+    <div id="historyList"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
